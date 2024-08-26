@@ -1,0 +1,78 @@
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #0E1722;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Inicio Header */
+.header {
+    background-color: #e23434;
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-list li {
+    list-style: none;
+    padding: 10px;
+}
+
+.logo {
+    width: 50px;
+}
+/* Fin Header */
+
+/*Inicio formulario agregar*/
+.agregar {
+    border: 2px solid #ffffff7e;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: #17202c;
+}
+
+.agregar label,
+.agregar input  {
+    padding: 10px;
+}
+
+.agregar label {
+    color: #ffffffab;
+}
+
+.agregar button {
+    margin: 40px 5px;
+}
+
+.agregar textarea {
+    resize: none;
+}
+/*Fin formulario agregar*/
+
+/*Inicio footer*/
+footer {
+    background-color: rgba(0, 0, 0, 0.678);
+    text-align: center;
+    padding: 30px;
+    margin-top: 70px;
+}
+/*Fin footer*/
+
+/*Inicio login*/
+.row a {
+    text-decoration: none;
+    color: #ffffff;
+}
+/*Fin login*/

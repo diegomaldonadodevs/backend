@@ -1,0 +1,52 @@
+<div class="agregar container" style="margin-top: 50px;">
+    <h2 class="text-center">Modificar evento</h2>
+    <form action="/admin/eventos/modificar" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{{evento.id}}" name="id">
+        <div class="row">
+            <div class="col">
+                <label>Título</label>
+                <input type="text" class="form-control" name="titulo" value="{{evento.titulo}}">
+            </div>
+            <div class="col">
+                <label>Subtítulo</label>
+                <input type="text" class="form-control" name="subtitulo" value="{{evento.subtitulo}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Fecha</label>
+                <input type="text" class="form-control" name="fecha" value="{{evento.fecha}}">
+            </div>
+            <div class="col">
+                <label>Hora</label>
+                <input type="text" class="form-control" name="hora" value="{{evento.hora}}">
+            </div>
+            <div class="col">
+                <label>Lugar</label>
+                <input type="text" class="form-control" name="lugar" value="{{evento.lugar}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Cuerpo</label>
+                <textarea type="text" class="form-control" name="cuerpo">{{evento.cuerpo}}</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                <label>Imagen:<input type="file" class="form-control" name="imagen" id="imagen"></label>
+            </p>
+            <p>
+                <label>Eliminar imagen actual?</label>
+                <input type="checkbox" name="img_delete" id="img_delete" value="1">
+                <input type="hidden" name="img_original" value="{{evento.img_id}}">
+            </p>
+        </div>
+
+        <button type="submit" class="btn btn-primary text-start">Modificar</button>
+        <a class="btn btn-primary" href="/admin/eventos" role="button">Volver</a>
+    </form>
+    {{#if error}}
+        <p>{{message}}</p>
+    {{/if}}
+</div>

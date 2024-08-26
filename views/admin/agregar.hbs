@@ -1,0 +1,44 @@
+<div class="agregar container" style="margin-top: 50px;">
+    <h2 class="text-center">Agregar un nuevo evento</h2>
+    <form action="/admin/eventos/agregar" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <label>Imagen:<input type="file" class="form-control" name="imagen" id="imagen"></label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Título</label>
+                <input type="text" class="form-control" name="titulo">
+            </div>
+            <div class="col">
+                <label>Subtítulo</label>
+                <input type="text" class="form-control" name="subtitulo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Fecha</label>
+                <input type="text" class="form-control" name="fecha">
+            </div>
+            <div class="col">
+                <label>Hora</label>
+                <input type="text" class="form-control" name="hora">
+            </div>
+            <div class="col">
+                <label>Lugar</label>
+                <input type="text" class="form-control" name="lugar">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Cuerpo</label>
+                <textarea type="text" class="form-control" name="cuerpo"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary text-start">Guardar</button>
+        <a class="btn btn-primary" href="/admin/eventos" role="button">Volver</a>
+        
+    </form>
+    {{#if error}}
+        <p>{{message}}</p>
+    {{/if}}
+</div>
